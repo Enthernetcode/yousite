@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Welcome to the Dashboard, {{ session['username'] }}!</h1>
+    
+    <form method="post" <!--action="{{ url_for('dashboard') }}"-->
+        <label for="video_id">Video ID:</label>
+        <input type="text" id="video_id" name="video_id" required>
+        <br>
+        <label for="comment_text">Comment:</label>
+        <textarea id="comment_text" name="comment_text" required></textarea>
+        <br>
+        <input type="submit" value="Post Comment">
+    </form>
+</body>
+</html>
